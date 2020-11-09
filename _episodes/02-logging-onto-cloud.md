@@ -91,7 +91,7 @@ operating system, but sometimes requires additional software.
 1. Open MobaXterm
 2. Click "Start local terminal” in the middle of the MobaXterm screen
 
-    ![](../fig/mobaXterm_screenshot_1.png)
+    ![](../fig/mobaXterm_screenshot_1.png =515x405)
 
 3. To connect to the TU Delft Linux gateway (student-linux.tudelft.nl) Type the following command:
 
