@@ -85,24 +85,33 @@ operating system, but sometimes requires additional software.
 
 #### Connecting using PC
 
-*Prerequisites*: You must have an SSH client. There are several free options but you should have installed [PuTTY.exe](http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html) at the begining of the workshop, and we're going to continue using that.
+*Prerequisites*: You must have an SSH client. There are several free options but you should have installed [MobaXterm](https://mobaxterm.mobatek.net/download-home-edition.html) at the begining of the workshop, and we're going to continue using that.
 
 
-1. Open PuTTY
-2. Paste in the 'Host Name (or IP address)' section the IP address provided by your instructor (or the IP address of an instance you have provisioned yourself)
+1. Open MobaXterm
+2. Click "Start local terminal” in the middle of the MobaXterm screen
+
+    ![](../fig/mobaXterm_screenshot_1.png)
+
+3. To connect to the TU Delft Linux gateway (student-linux.tudelft.nl) Type the following command:
+
+    ![](../fig/mobaXterm_screenshot_2.png)
+
+
+4. Paste in the 'Host Name (or IP address)' section the IP address provided by your instructor (or the IP address of an instance you have provisioned yourself)
 
     *Keep the default selection 'SSH' and Port (22)*
 
     ![](../fig/putty_screenshot_1.png)
 
-2. Click 'Open' 
+5. Click 'Open' 
     
     You will be presented with a security warning
 
     ![](../fig/putty_screenshot_2.png)
 
-3. Select 'Yes' to continue to connect
-3. In the final step, you will be asked to provide a login and password
+6. Select 'Yes' to continue to connect
+7. In the final step, you will be asked to provide a login and password
     
     **Note:** When typing your password, it is common in Unix/Linux not see any asterisks (e.g. `****) or moving cursors. Just continue typing
 
