@@ -76,7 +76,7 @@ with a secure way to use a [shell](http://swcarpentry.github.io/shell-novice). I
 the shell will be running on a remote machine. This protocol is available for every
 operating system, but sometimes requires additional software.
 
-## Logging onto a cloud instance
+## Logging onto the TU Delft Linux environment
 
 **Please select the platform you wish to use for the exercises: <select id="id_platform" name="platformlist" onchange="change_content_by_platform('id_platform');return false;"><option value="aws_unix" id="id_aws_unix" selected> AWS_UNIX </option><option value="aws_win" id="id_aws_win" selected> AWS_Windows </option></select>**
 
@@ -159,6 +159,32 @@ Mac and Linux operating systems will already have terminals installed.
 You should now be connected!
 
 </div>
+
+## Logging onto the TU Delft cloud instance
+
+1.  Connect to one of the TU Delft cloud instances. Your instructeur will assign one which you will use during the course.
+
+    ~~~
+    $ ssh REPLACE-WITH-YOUR-NETID@vm0X-bt-edu.tnw.tudelft.nl
+    ~~~
+    {: .bash}
+
+2.  You will receive a security message that looks something like the message below
+
+    ~~~
+    The authenticity of host 'ec2-52-91-14-206.compute-1.amazonaws.com (52.91.14.206)' can't be established.
+    ECDSA key fingerprint is SHA256:S2mMV8mCThjJHm0sUmK2iOE5DBqs8HiJr6pL3x/XxkI.
+    Are you sure you want to continue connecting (yes/no)?
+    ~~~
+    {: .bash}
+
+3. Type `yes` to proceed
+
+4. In the final step, you will be asked to provide a login and password
+    
+    **Note:** When typing your password, it is common in Unix/Linux not see any asterisks (e.g. `****`) or moving cursors. Just continue typing.
+
+You should now be connected!
 
 ## Logging off a cloud instance
 
