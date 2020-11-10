@@ -89,6 +89,7 @@ operating system, but sometimes requires additional software.
 
 
 1. Open MobaXterm
+
 2. Click "Start local terminal” in the middle of the MobaXterm screen
 
     ![](../fig/mobaXterm_screenshot_1.png)
@@ -97,25 +98,22 @@ operating system, but sometimes requires additional software.
 
     ![](../fig/mobaXterm_screenshot_2.png)
 
+    Be sure to pay attention to capitalization and spaces.
 
-4. Paste in the 'Host Name (or IP address)' section the IP address provided by your instructor (or the IP address of an instance you have provisioned yourself)
+4. You will receive a security message that looks something like the message below
 
-    *Keep the default selection 'SSH' and Port (22)*
+    ~~~
+    The authenticity of host 'ec2-52-91-14-206.compute-1.amazonaws.com (52.91.14.206)' can't be established.
+    ECDSA key fingerprint is SHA256:S2mMV8mCThjJHm0sUmK2iOE5DBqs8HiJr6pL3x/XxkI.
+    Are you sure you want to continue connecting (yes/no)?
+    ~~~
+    {: .bash}
 
-    ![](../fig/putty_screenshot_1.png)
+5. Type `yes` to proceed
 
-5. Click 'Open' 
+6. In the final step, you will be asked to provide a login and password
     
-    You will be presented with a security warning
-
-    ![](../fig/putty_screenshot_2.png)
-
-6. Select 'Yes' to continue to connect
-7. In the final step, you will be asked to provide a login and password
-    
-    **Note:** When typing your password, it is common in Unix/Linux not see any asterisks (e.g. `****) or moving cursors. Just continue typing
-
-    ![](../fig/putty_screenshot_3.png)
+    **Note:** When typing your password, it is common in Unix/Linux not see any asterisks (e.g. `****`) or moving cursors. Just continue typing.
 
 You should now be connected!
 
