@@ -98,7 +98,7 @@ operating system, but sometimes requires additional software.
 
     ![](../fig/mobaXterm_screenshot_2.png)
 
-    Be sure to pay attention to capitalization and spaces.
+    *Be sure to pay attention to capitalization and spaces*
 
 4. You will receive a security message that looks something like the message below
 
@@ -133,10 +133,10 @@ Mac and Linux operating systems will already have terminals installed.
 
     ![terminal icon](../fig/terminal.png)
 
-2. Type the following command substituting `ip_address` by the IP address your instructor will provide (or the IP address of an instance you have provisioned yourself)
+2. To connect to the TU Delft Linux gateway (student-linux.tudelft.nl) Type the following command:
 
     ~~~
-    $ ssh dcuser@ip_address
+    $ ssh REPLACE-WITH-YOUR-NETID@student-linux.tudelft.nl
     ~~~
     {: .bash}
 
