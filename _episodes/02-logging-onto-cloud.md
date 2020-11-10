@@ -3,12 +3,12 @@ title: "Logging onto Cloud"
 teaching: 5
 exercises: 5
 questions:
-- How do I connect to an AWS instance?
+- How do I connect to the TU Delft cloud instance?
 objectives:
 - Log onto to a running instance
 - Log off from a running instance
 keypoints:
-- You can use one set of log-in credentials for many instances
+- You will use your TU Delft netID credentials for all instances
 - Logging off an instance is not the same as turning off an instance
 ---
 
@@ -36,38 +36,11 @@ window.onload = set_page_view_defaults;
 
 ## Important Note
 
-This lesson covers how to log into, and out of, an *already running* Amazon instance.
+This lesson covers how to log into, and out of, the TU Delft cloud instance.
 
-If you're returning post-workshop and want to launch your own instance, use [launching cloud instances on your own](../LaunchingInstances/)
+## Background to TU Delft environment
 
-## Background to AWS
-
-Setting up a new AWS instance requires a credit card, an AWS account, and up to
-a day of verification time, but you've already spent most of this workshop working in the cloud!
-To save time, your instructor launched a remote computer (instance) for you prior
-to the workshop, and connected it to our lesson data. You've already logged into it at
-least once, but now that you're more comfortable with the command line, lets go back and talk about how it all works.
-
-
-We have a pre-configured copy of the data needed for this workshop that is always available
-to attach to a new instance on Amazon, as long as you have an account, and the log-in credentials to open it.
-
-To access the pre-configured workshop data, you'll need to use our log-in credentials (user name and password). These
-credentials will be supplied by your instructor.
-
-But first, you need a place to log *into*! To find the instance that's attached to that data,
-you'll need something called an IP address. Your instructor should have given this to you
-at the beginning of the workshop.
-
-An IP address is essentially the numerical version of a web address like www.amazon.com
-
-Recall that cloud computing is about choice. You can rent just a single processor on a large computer
-for a small project, or you can rent hundreds of processors spread across multiple computers for
-a large project. In either case, once you rent the collection of processors, Amazon will
-present your rental to you as if it was a single computer. So, the physical computers that host your
-instances don't really move, *but* every time you launch a new instance, it will have a new IP address.
-
-So, each time you launch a new instance, the *IP address* changes, but your *Log-in Credentials* don't have to.
+You will be using TU Delft cloud instances which contain all the software and data needed for this workshop. To be able to connect to the cloud instance from outside the TU Delft campus you first have to connect to a Linux bastion host. During this session you will learn how to do this.
 
 ## Connection Protocols
 
@@ -103,8 +76,8 @@ operating system, but sometimes requires additional software.
 4. You will receive a security message that looks something like the message below
 
     ~~~
-    The authenticity of host 'ec2-52-91-14-206.compute-1.amazonaws.com (52.91.14.206)' can't be established.
-    ECDSA key fingerprint is SHA256:S2mMV8mCThjJHm0sUmK2iOE5DBqs8HiJr6pL3x/XxkI.
+    The authenticity of host 'student-linux.tudelft.nl (131.180.123.205)' can't be established.
+    ECDSA key fingerprint is 1c:24:7c:8b:3c:f9:34:d5:25:02:8a:a6:1b:11:ea:5a.
     Are you sure you want to continue connecting (yes/no)?
     ~~~
     {: .bash}
@@ -145,8 +118,8 @@ Mac and Linux operating systems will already have terminals installed.
 3. You will receive a security message that looks something like the message below
 
     ~~~
-    The authenticity of host 'ec2-52-91-14-206.compute-1.amazonaws.com (52.91.14.206)' can't be established.
-    ECDSA key fingerprint is SHA256:S2mMV8mCThjJHm0sUmK2iOE5DBqs8HiJr6pL3x/XxkI.
+    The authenticity of host 'student-linux.tudelft.nl (131.180.123.205)' can't be established.
+    ECDSA key fingerprint is 1c:24:7c:8b:3c:f9:34:d5:25:02:8a:a6:1b:11:ea:5a.
     Are you sure you want to continue connecting (yes/no)?
     ~~~
     {: .bash}
@@ -172,8 +145,8 @@ You should now be connected!
 2.  You will receive a security message that looks something like the message below
 
     ~~~
-    The authenticity of host 'ec2-52-91-14-206.compute-1.amazonaws.com (52.91.14.206)' can't be established.
-    ECDSA key fingerprint is SHA256:S2mMV8mCThjJHm0sUmK2iOE5DBqs8HiJr6pL3x/XxkI.
+    The authenticity of host 'vm03-bt-edu.tnw.tudelft.nl (131.180.205.58)' can't be established.
+    ECDSA key fingerprint is 1c:24:7c:8b:3c:f9:34:d5:25:02:8a:a6:1b:11:ea:5a.
     Are you sure you want to continue connecting (yes/no)?
     ~~~
     {: .bash}
@@ -189,19 +162,30 @@ You should now be connected!
 ## Logging off a cloud instance
 
 Logging off your instance is a lot like logging out of your local computer: it stops any processes
-that are currently running, but doesn't shut the computer off. AWS instances acrue charges whenever
-they are running, *even if you are logged off*.
+that are currently running, but doesn't shut the computer off.
 
-If you are *completely* done with your AWS instance, you will need to **terminate** it after you log off. Instructions for terminating an instance are here: [launching cloud instances on your own](../LaunchingInstances).
-
-To log off, use the `exit` command in the same terminal you connected with. This will close the connection, and your terminal will go back to showing your local computer:
+To log off, use the `exit` command in the same terminal you connected with. This will close the connection to the cloud instance, and your terminal will go back to showing the student-linux bastion host:
 
 ~~~
-dcuser@ip-172-31-62-209 $ exit
+YOUR-NETID@vm03-bt-edu:~$ exit
+logout
+Connection to vm03-bt-edu.tnw.tudelft.nl closed.
+-bash-4.1$
+~~~
+{: .bash}
 
+To log off the student-linux bastion, type `exit` again. This will close the connection to the student-linux bastion, and your terminal will go back to showing your local computer.:
+
+~~~
+-bash-4.1$ exit
+logout
+Connection to linux-bastion.tudelft.nl closed.
 Amandas-MacBook-Pro-3 $
 ~~~
 {: .bash}
+
+
+
 
 ## Logging back in
 
@@ -209,7 +193,7 @@ Internet connections can be slow or unstable. If you're just browsing the intern
 reload pages, or wait for pictures to load. When you're working in cloud, that means you'll sometimes
 be suddenly disconnected from your instance when you weren't expecting it. Even on the best internet
 connections, your signal will occasionally drop, so it's good to know the above SSH steps, and be able
-to log into AWS without looking up the instructions each time.
+to log into the cloud environment without looking up the instructions each time.
 
 In the next section, we'll also show you some programs that you can use to keep your processes going
 even if your connection drops. But for now, just practice logging on and off a few times.
